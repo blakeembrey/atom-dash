@@ -1,0 +1,4 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+    'Look up in Dash': 'dash:context-menu'
