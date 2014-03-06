@@ -1,7 +1,7 @@
 {
   "name": "dash",
   "main": "./lib/dash",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "Dash documentation integration with Atom",
   "repository": "https://github.com/blakeembrey/atom-dash",
