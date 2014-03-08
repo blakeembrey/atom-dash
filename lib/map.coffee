@@ -14,9 +14,9 @@ module.exports =
   'Clojure':
     ['clojure']
   'CoffeeScript':
-    ['coffee', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'express', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
+    ['coffee', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'mongoose', 'grunt', 'express', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
   'CoffeeScript (Literate)':
-    ['coffee', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'express', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
+    ['coffee', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'mongoose', 'grunt', 'express', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
   'ColdFusion':
     ['cf']
   'CSS':
@@ -42,7 +42,7 @@ module.exports =
   'Java':
     ['java', 'javafx', 'grails', 'groovy', 'playjava', 'spring', 'cvj', 'processing']
   'JavaScript':
-    ['javascript', 'jquery', 'jqueryui', 'jquerym', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'express', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
+    ['javascript', 'jquery', 'jqueryui', 'jquerym', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'express', 'mongoose', 'grunt', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
   'LESS':
     ['less', 'css', 'bootstrap', 'foundation', 'cordova', 'phonegap']
   'Lisp':
@@ -75,6 +75,8 @@ module.exports =
     ['ruby', 'rubygems', 'rails']
   'Ruby on Rails':
     ['ruby', 'rubygems', 'rails']
+  'Rust':
+    ['rust']
   'Sass':
     ['sass', 'compass', 'bourbon', 'neat', 'css']
   'Scala':
