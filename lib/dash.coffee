@@ -16,7 +16,19 @@ plugin = module.exports =
 
     return plugin.search(selection, sensitive) if selection
 
-    plugin.search(editor.getWordUnderCursor(), sensitive)
+    scopes       = editor.getCursorScopes()
+    currentScope = scopes[scopes.length - 1]
+
+    # Use the current cursor scope if available. If the current scope is a
+    # string, comment or not available, get the current word under the cursor.
+    # Ignore: comment (any), string (any), meta (html), markup (md).
+    if scopes.length > 1 && !/^(?:comment|string|meta|markup)(?:\.|$)/.test(currentScope)
+      range = editor.bufferRangeForScopeAtCursor(currentScope)
+      text  = editor.getTextInBufferRange(range)
+    else
+      text = editor.getWordUnderCursor()
+
+    plugin.search(text, sensitive)
 
   contextMenu: () ->
     plugin.search(atom.workspace.getActiveEditor().getWordUnderCursor(), true)
