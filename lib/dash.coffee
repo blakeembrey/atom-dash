@@ -1,5 +1,5 @@
 qs    = require('querystring')
-spawn = require('child_process').spawn
+Shell = require('shell')
 
 plugin = module.exports =
   configDefaults:
@@ -37,7 +37,7 @@ plugin = module.exports =
     if sensitive
       language = atom.workspace.getActiveEditor().getGrammar().name
 
-    spawn('open', [@createLink(string, language)])
+    Shell.openExternal(@createLink(string, language))
 
   createLink: (string, language) ->
     keys = atom.config.get('dash.grammars.' + language) if language
