@@ -1,7 +1,7 @@
 _     = require('underscore-plus')
 qs    = require('querystring')
 map   = require('./map')
-spawn = require('child_process').spawn
+shell = require('shell')
 
 plugin = module.exports =
   activate: () ->
@@ -36,7 +36,7 @@ plugin = module.exports =
     if sensitive
       language = atom.workspace.getActiveEditor().getGrammar().name
 
-    spawn('open', [@createLink(string, language)])
+    shell.openExternal(@createLink(string, language))
 
   createLink: (string, language) ->
     # Attempt to pull default configuration from the user config. If this
