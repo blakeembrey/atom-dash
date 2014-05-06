@@ -8,5 +8,8 @@
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "underscore-plus": "^1.2.1"
   }
 }

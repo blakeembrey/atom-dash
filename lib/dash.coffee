@@ -1,10 +1,9 @@
+_     = require('underscore-plus')
 qs    = require('querystring')
+map   = require('./map')
 spawn = require('child_process').spawn
 
 plugin = module.exports =
-  configDefaults:
-    grammars: require('./map')
-
   activate: () ->
     atom.workspaceView.command('dash:shortcut', @shortcut)
     atom.workspaceView.command('dash:shortcut-alt', @shortcut.bind(@, false))
@@ -40,7 +39,12 @@ plugin = module.exports =
     spawn('open', [@createLink(string, language)])
 
   createLink: (string, language) ->
-    keys = atom.config.get('dash.grammars.' + language) if language
+    # Attempt to pull default configuration from the user config. If this
+    # does not exist, fall back to the default language map.
+    if language
+      keys = atom.config.get('dash.grammars.' + language)
+      keys = map[language] if !keys
+
     link = 'dash-plugin://'
 
     if keys?.length
