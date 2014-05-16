@@ -14,19 +14,21 @@ module.exports =
   'Clojure':
     ['clojure']
   'CoffeeScript':
-    ['coffee', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'mongoose', 'grunt', 'express', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
+    ['coffee', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'mongoose', 'moment', 'require', 'awsjs', 'jasmine', 'sinon', 'grunt', 'express', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
   'CoffeeScript (Literate)':
-    ['coffee', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'mongoose', 'grunt', 'express', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
+    ['coffee', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'mongoose', 'moment', 'require', 'awsjs', 'jasmine', 'sinon', 'grunt', 'express', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
   'ColdFusion':
     ['cf']
   'CSS':
     ['css', 'bootstrap', 'foundation', 'cordova', 'phonegap']
+  'Dart':
+    ['dartlang', 'polymerdart', 'angulardart']
   'Elixir':
     ['elixir']
   'Erlang':
     ['erlang']
   'Go':
-    ['go']
+    ['go', 'godoc']
   'Haskell':
     ['haskell']
   'Ruby Haml':
@@ -34,17 +36,17 @@ module.exports =
   'Handlebars':
     ['ember']
   'HTML':
-    ['html', 'svg', 'css', 'bootstrap', 'foundation', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui']
+    ['html', 'svg', 'css', 'bootstrap', 'foundation', 'awesome', 'statamic', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui']
   'HTML (Rails)':
-    ['ruby', 'rubygems', 'rails', 'html', 'svg', 'css', 'bootstrap', 'foundation', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui']
+    ['ruby', 'rubygems', 'rails', 'html', 'svg', 'css', 'bootstrap', 'foundation', 'awesome', 'statamic', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui']
   'Jade':
     ['jade']
   'Java':
     ['java', 'javafx', 'grails', 'groovy', 'playjava', 'spring', 'cvj', 'processing']
   'JavaScript':
-    ['javascript', 'jquery', 'jqueryui', 'jquerym', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'express', 'mongoose', 'grunt', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
+    ['javascript', 'jquery', 'jqueryui', 'jquerym', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'express', 'mongoose', 'moment', 'require', 'awsjs', 'jasmine', 'sinon', 'grunt', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
   'LESS':
-    ['less', 'css', 'bootstrap', 'foundation', 'cordova', 'phonegap']
+    ['less', 'css', 'bootstrap', 'foundation', 'awesome', 'cordova', 'phonegap']
   'Lisp':
     ['lisp']
   'Literate Haskell':
@@ -62,13 +64,13 @@ module.exports =
   'Perl':
     ['perl', 'manpages']
   'PHP':
-    ['php', 'wordpress', 'drupal', 'zend', 'laravel', 'yii', 'joomla', 'ee', 'codeigniter', 'cakephp', 'symfony', 'typo3', 'twig', 'smarty', 'mysql', 'sqlite', 'mongodb', 'psql', 'redis', 'html', 'svg', 'css', 'bootstrap', 'foundation', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui']
+    ['php', 'wordpress', 'drupal', 'zend', 'laravel', 'yii', 'joomla', 'ee', 'codeigniter', 'cakephp', 'phpunit', 'symfony', 'typo3', 'twig', 'smarty', 'phpp', 'mysql', 'sqlite', 'mongodb', 'psql', 'redis', 'html', 'statamic', 'svg', 'css', 'bootstrap', 'foundation', 'awesome', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui']
   'Processing':
     ['processing']
   'Puppet':
     ['puppet']
   'Python':
-    ['python', 'django', 'twisted', 'sphinx', 'flask', 'cvp']
+    ['python', 'django', 'twisted', 'sphinx', 'flask', 'tornado', 'sqlalchemy', 'numpy', 'scipy', 'salt', 'cvp']
   'R':
     ['r']
   'Ruby':
