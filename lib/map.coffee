@@ -34,7 +34,7 @@ module.exports =
   'Ruby Haml':
     ['haml']
   'Handlebars':
-    ['ember']
+    ['html', 'svg', 'css', 'bootstrap', 'foundation', 'awesome', 'statamic', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui']
   'HTML':
     ['html', 'svg', 'css', 'bootstrap', 'foundation', 'awesome', 'statamic', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui']
   'HTML (Rails)':
