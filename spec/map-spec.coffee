@@ -27,7 +27,6 @@ describe 'map', ->
 
   it 'should have a context for JavaScript', ->
     js = map['JavaScript']
-    console.log js
     expect(js).toContain 'javascript'
     expect(js).toContain 'jquery'
     expect(js).toContain 'unity3d'
