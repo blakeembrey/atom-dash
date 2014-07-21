@@ -1,3 +1,10 @@
+_ = require('underscore-plus')
+
+web    = ['html', 'svg', 'css', 'bootstrap', 'foundation', 'awesome', 'statamic']
+js     = ['javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui', 'unity3d']
+coffee = ['coffee']
+php    = ['php', 'wordpress', 'drupal', 'zend', 'laravel', 'yii', 'joomla', 'ee', 'codeigniter', 'cakephp', 'phpunit', 'symfony', 'typo3', 'twig', 'smarty', 'phpp', 'mysql', 'sqlite', 'mongodb', 'psql', 'redis', 'html', 'statamic', 'svg', 'css', 'bootstrap', 'foundation', 'awesome']
+
 module.exports =
   'ActionScript':
     ['actionscript']
@@ -14,9 +21,9 @@ module.exports =
   'Clojure':
     ['clojure']
   'CoffeeScript':
-    ['coffee', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'mongoose', 'moment', 'require', 'awsjs', 'jasmine', 'sinon', 'grunt', 'express', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
+    _.union coffee, web, js
   'CoffeeScript (Literate)':
-    ['coffee', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'mongoose', 'moment', 'require', 'awsjs', 'jasmine', 'sinon', 'grunt', 'express', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
+    _.union coffee, web, js
   'ColdFusion':
     ['cf']
   'CSS':
@@ -34,17 +41,17 @@ module.exports =
   'Ruby Haml':
     ['haml']
   'Handlebars':
-    ['html', 'svg', 'css', 'bootstrap', 'foundation', 'awesome', 'statamic', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui']
+    _.union web, js
   'HTML':
-    ['html', 'svg', 'css', 'bootstrap', 'foundation', 'awesome', 'statamic', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui']
+    _.union web, js
   'HTML (Rails)':
-    ['ruby', 'rubygems', 'rails', 'html', 'svg', 'css', 'bootstrap', 'foundation', 'awesome', 'statamic', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui']
+    _.union ['ruby', 'rubygems', 'rails'], web, js
   'Jade':
     ['jade']
   'Java':
     ['java', 'javafx', 'grails', 'groovy', 'playjava', 'spring', 'cvj', 'processing']
   'JavaScript':
-    ['javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'nodejs', 'express', 'mongoose', 'moment', 'require', 'awsjs', 'jasmine', 'sinon', 'grunt', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d']
+    js
   'LESS':
     ['less', 'css', 'bootstrap', 'foundation', 'awesome', 'cordova', 'phonegap']
   'Lisp':
@@ -64,7 +71,7 @@ module.exports =
   'Perl':
     ['perl', 'manpages']
   'PHP':
-    ['php', 'wordpress', 'drupal', 'zend', 'laravel', 'yii', 'joomla', 'ee', 'codeigniter', 'cakephp', 'phpunit', 'symfony', 'typo3', 'twig', 'smarty', 'phpp', 'mysql', 'sqlite', 'mongodb', 'psql', 'redis', 'html', 'statamic', 'svg', 'css', 'bootstrap', 'foundation', 'awesome', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui']
+    _.union php, js
   'Processing':
     ['processing']
   'Puppet':
