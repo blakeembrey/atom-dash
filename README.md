@@ -1,4 +1,7 @@
-# Dash
+# Atom Dash
+
+[![Build status][travis-image]][travis-url]
+[![Gittip][gittip-image]][gittip-url]
 
 Simple [Dash](http://kapeli.com/dash) documentation integration for [Atom](https://atom.io/packages/dash).
 
@@ -31,3 +34,8 @@ Docsets defined in your local configuration will override the default settings. 
 ## License
 
 MIT
+
+[travis-image]: https://img.shields.io/travis/blakeembrey/atom-dash.svg?style=flat
+[travis-url]: https://travis-ci.org/blakeembrey/atom-dash
+[gittip-image]: https://img.shields.io/gittip/blakeembrey.svg?style=flat
+[gittip-url]: https://www.gittip.com/blakeembrey
