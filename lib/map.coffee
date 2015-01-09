@@ -1,104 +1,329 @@
 _ = require('underscore-plus')
 
-web    = ['html', 'svg', 'css', 'bootstrap', 'foundation', 'awesome', 'statamic']
-js     = ['javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'moo', 'prototype', 'ember', 'lodash', 'underscore', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'cordova', 'phonegap', 'yui', 'unity3d']
-coffee = ['coffee']
-php    = ['php', 'wordpress', 'drupal', 'zend', 'laravel', 'yii', 'joomla', 'ee', 'codeigniter', 'cakephp', 'phpunit', 'symfony', 'typo3', 'twig', 'smarty', 'phpp', 'mysql', 'sqlite', 'mongodb', 'psql', 'redis', 'html', 'statamic', 'svg', 'css', 'bootstrap', 'foundation', 'awesome']
+css = [
+  'css',
+  'bootstrap',
+  'foundation',
+  'awesome'
+  'cordova',
+  'phonegap'
+]
+
+js = [
+  'javascript',
+  'jquery',
+  'jqueryui',
+  'jquerym',
+  'angularjs',
+  'backbone',
+  'marionette',
+  'meteor',
+  'moo',
+  'prototype',
+  'ember',
+  'lodash',
+  'underscore',
+  'sencha',
+  'extjs',
+  'titanium',
+  'knockout',
+  'zepto',
+  'cordova',
+  'phonegap',
+  'yui',
+  'unity3d'
+]
+
+web = _.union(
+  [
+    'html',
+    'svg',
+    'statamic'
+  ],
+  js,
+  css
+)
+
+coffeescript = _.union(
+  [
+    'coffee'
+  ],
+  web
+)
+
+php = [
+  'php',
+  'wordpress',
+  'drupal',
+  'zend',
+  'laravel',
+  'yii',
+  'joomla',
+  'ee',
+  'codeigniter',
+  'cakephp',
+  'phpunit',
+  'symfony',
+  'typo3',
+  'twig',
+  'smarty',
+  'phpp',
+  'mysql',
+  'sqlite',
+  'mongodb',
+  'psql',
+  'redis',
+  'html',
+  'statamic',
+  'svg',
+  'css',
+  'bootstrap',
+  'foundation',
+  'awesome'
+]
+
+ruby = [
+  'ruby',
+  'rubygems',
+  'rails'
+]
+
+objectiveC = [
+  'iphoneos',
+  'macosx',
+  'appledoc',
+  'cocos2d',
+  'cocos3d',
+  'kobold2d',
+  'sparrow',
+  'c',
+  'manpages'
+]
 
 module.exports =
   'ActionScript':
-    ['actionscript']
+    [
+      'actionscript'
+    ]
   'Boo':
-    ['unity3d']
+    [
+      'unity3d'
+    ]
   'C':
-    ['c', 'glib', 'gl2', 'gl3', 'gl4', 'manpages']
+    [
+      'c',
+      'glib',
+      'gl2',
+      'gl3',
+      'gl4',
+      'manpages'
+    ]
   'C++':
-    ['cpp', 'net', 'boost', 'qt', 'cvcpp', 'cocos2dx', 'c', 'manpages']
+    [
+      'cpp',
+      'net',
+      'boost',
+      'qt',
+      'cvcpp',
+      'cocos2dx',
+      'c',
+      'manpages'
+    ]
   'C#':
-    ['net', 'mono', 'unity3d']
+    [
+      'net',
+      'mono',
+      'unity3d'
+    ]
   'Objective-J':
-    ['cappuccino']
+    [
+      'cappuccino'
+    ]
   'Clojure':
-    ['clojure']
+    [
+      'clojure'
+    ]
   'CoffeeScript':
-    _.union coffee, web, js
+    coffeescript
   'CoffeeScript (Literate)':
-    _.union coffee, web, js
+    coffeescript
   'ColdFusion':
-    ['cf']
+    [
+      'cf'
+    ]
   'CSS':
-    ['css', 'bootstrap', 'foundation', 'cordova', 'phonegap']
+    css
   'Dart':
-    ['dartlang', 'polymerdart', 'angulardart']
+    [
+      'dartlang',
+      'polymerdart',
+      'angulardart'
+    ]
   'Elixir':
-    ['elixir']
+    [
+      'elixir'
+    ]
   'Erlang':
-    ['erlang']
+    [
+      'erlang'
+    ]
   'Go':
-    ['go', 'godoc']
+    [
+      'go',
+      'godoc'
+    ]
   'Haskell':
-    ['haskell']
+    [
+      'haskell'
+    ]
   'Ruby Haml':
-    ['haml']
+    [
+      'haml'
+    ]
   'Handlebars':
-    _.union web, js
+    web
   'HTML':
-    _.union web, js
+    web
   'HTML (Rails)':
-    _.union ['ruby', 'rubygems', 'rails'], web, js
+    _.union(
+      [
+        'ruby',
+        'rubygems',
+        'rails'
+      ],
+      web
+    )
   'Jade':
-    ['jade']
+    [
+      'jade'
+    ]
   'Java':
-    ['java', 'javafx', 'grails', 'groovy', 'playjava', 'spring', 'cvj', 'processing']
+    [
+      'java',
+      'javafx',
+      'grails',
+      'groovy',
+      'playjava',
+      'spring',
+      'cvj',
+      'processing'
+    ]
   'JavaScript':
     js
   'LESS':
-    ['less', 'css', 'bootstrap', 'foundation', 'awesome', 'cordova', 'phonegap']
+    css
   'Lisp':
-    ['lisp']
+    [
+      'lisp'
+    ]
   'Literate Haskell':
-    ['haskell']
+    [
+      'haskell'
+    ]
   'Lua':
-    ['lua', 'corona']
+    [
+      'lua',
+      'corona'
+    ]
   'GitHub Markdown':
-    ['markdown']
+    [
+      'markdown'
+    ]
   'Objective-C':
-    ['iphoneos', 'macosx', 'appledoc', 'cocos2d', 'cocos3d', 'kobold2d', 'sparrow', 'c', 'manpages']
+    objectiveC
   'Objective-C++':
-    ['iphoneos', 'macosx', 'appledoc', 'cocos2d', 'cocos3d', 'kobold2d', 'sparrow', 'c', 'manpages', 'cpp', 'cocos2dx']
+    _.union(
+      objectiveC,
+      [
+        'cpp',
+        'cocos2dx'
+      ]
+    )
   'OCaml':
-    ['ocaml']
+    [
+      'ocaml'
+    ]
   'Perl':
-    ['perl', 'manpages']
+    [
+      'perl',
+      'manpages'
+    ]
   'PHP':
-    _.union php, js
+    _.union(
+      php,
+      web
+    )
   'Processing':
-    ['processing']
+    [
+      'processing'
+    ]
   'Puppet':
-    ['puppet']
+    [
+      'puppet'
+    ]
   'Python':
-    ['python', 'django', 'twisted', 'sphinx', 'flask', 'tornado', 'sqlalchemy', 'numpy', 'scipy', 'salt', 'cvp']
+    [
+      'python',
+      'django',
+      'twisted',
+      'sphinx',
+      'flask',
+      'tornado',
+      'sqlalchemy',
+      'numpy',
+      'scipy',
+      'salt',
+      'cvp'
+    ]
   'R':
-    ['r']
+    [
+      'r'
+    ]
   'Ruby':
-    ['ruby', 'rubygems', 'rails']
+    ruby
   'Ruby on Rails':
-    ['ruby', 'rubygems', 'rails']
+    ruby
   'Rust':
-    ['rust']
+    [
+      'rust'
+    ]
   'Sass':
-    ['sass', 'compass', 'bourbon', 'neat', 'css']
+    _.union(
+      [
+        'sass',
+        'compass',
+        'bourbon',
+        'neat'
+      ],
+      css
+    )
   'Scala':
-    ['scala', 'akka', 'playscala']
+    [
+      'scala',
+      'akka',
+      'playscala'
+    ]
   'Shell Scripts':
-    ['bash', 'manpages']
+    [
+      'bash',
+      'manpages'
+    ]
   'SQL':
-    ['mysql', 'sqlite', 'psql']
+    [
+      'mysql',
+      'sqlite',
+      'psql'
+    ]
   'SQL (Rails)':
-    ['ruby', 'rubygems', 'rails']
+    ruby
   'Stylus':
-    ['stylus', 'css', 'bootstrap', 'foundation', 'cordova', 'phonegap']
+    css
   'Tcl':
-    ['tcl']
+    [
+      'tcl'
+    ]
   'YAML':
-    ['chef', 'ansible']
+    [
+      'chef',
+      'ansible'
+    ]
