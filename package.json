@@ -9,7 +9,13 @@
   "engines": {
     "atom": ">0.50.0"
   },
+  "scripts": {
+    "test": "apm test"
+  },
   "dependencies": {
     "underscore-plus": "^1.2.1"
+  },
+  "devDependencies": {
+    "pre-commit": "0.0.9"
   }
 }
