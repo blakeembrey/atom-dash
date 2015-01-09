@@ -5,9 +5,11 @@ shell = require('shell')
 
 plugin = module.exports =
   activate: () ->
-    atom.workspaceView.command('dash:shortcut', @shortcut)
-    atom.workspaceView.command('dash:shortcut-alt', @shortcut.bind(@, false))
-    atom.workspaceView.command('dash:context-menu', @contextMenu)
+    atom.commands.add('atom-workspace', {
+      'dash:shortcut': @shortcut,
+      'dash:shortcut-alt': @shortcut.bind(@, false),
+      'dash:context-menu': @contextMenu
+    })
 
   shortcut: (sensitive) ->
     editor    = atom.workspace.getActiveEditor()
