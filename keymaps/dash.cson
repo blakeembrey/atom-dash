@@ -7,6 +7,6 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
-'.editor:not(.mini)':
+'atom-text-editor':
   'ctrl-h': 'dash:shortcut'
   'ctrl-alt-h': 'dash:shortcut-alt'
