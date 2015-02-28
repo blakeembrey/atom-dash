@@ -1,5 +1,3 @@
-_ = require('underscore-plus')
-
 css = [
   'css',
   'bootstrap',
@@ -34,22 +32,15 @@ js = [
   'unity3d'
 ]
 
-web = _.union(
-  [
-    'html',
-    'svg',
-    'statamic'
-  ],
-  js,
-  css
-)
+web = [
+  'html',
+  'svg',
+  'statamic'
+].concat(js, css)
 
-coffeescript = _.union(
-  [
-    'coffee'
-  ],
-  web
-)
+coffeescript = [
+  'coffee'
+].concat(web)
 
 php = [
   'php',
@@ -101,229 +92,169 @@ objectiveC = [
 ]
 
 module.exports =
-  'ActionScript':
-    [
-      'actionscript'
-    ]
-  'Boo':
-    [
-      'unity3d'
-    ]
-  'C':
-    [
-      'c',
-      'glib',
-      'gl2',
-      'gl3',
-      'gl4',
-      'manpages'
-    ]
-  'C++':
-    [
-      'cpp',
-      'net',
-      'boost',
-      'qt',
-      'cvcpp',
-      'cocos2dx',
-      'c',
-      'manpages'
-    ]
-  'C#':
-    [
-      'net',
-      'mono',
-      'unity3d'
-    ]
-  'Objective-J':
-    [
-      'cappuccino'
-    ]
-  'Clojure':
-    [
-      'clojure'
-    ]
-  'CoffeeScript':
-    coffeescript
-  'CoffeeScript (Literate)':
-    coffeescript
-  'ColdFusion':
-    [
-      'cf'
-    ]
-  'CSS':
-    css
-  'Dart':
-    [
-      'dartlang',
-      'polymerdart',
-      'angulardart'
-    ]
-  'Elixir':
-    [
-      'elixir'
-    ]
-  'Erlang':
-    [
-      'erlang'
-    ]
-  'Go':
-    [
-      'go',
-      'godoc'
-    ]
-  'Haskell':
-    [
-      'haskell'
-    ]
-  'Ruby Haml':
-    [
-      'haml'
-    ]
-  'Handlebars':
-    web
-  'HTML':
-    web
-  'HTML (Rails)':
-    _.union(
-      [
-        'ruby',
-        'rubygems',
-        'rails'
-      ],
-      web
-    )
-  'Jade':
-    [
-      'jade'
-    ]
-  'Java':
-    [
-      'java',
-      'javafx',
-      'grails',
-      'groovy',
-      'playjava',
-      'spring',
-      'cvj',
-      'processing'
-    ]
-  'JavaScript':
-    js
-  'LESS':
-    css
-  'Lisp':
-    [
-      'lisp'
-    ]
-  'Literate Haskell':
-    [
-      'haskell'
-    ]
-  'Lua':
-    [
-      'lua',
-      'corona'
-    ]
-  'GitHub Markdown':
-    [
-      'markdown'
-    ]
-  'Objective-C':
-    objectiveC
-  'Objective-C++':
-    _.union(
-      objectiveC,
-      [
-        'cpp',
-        'cocos2dx'
-      ]
-    )
-  'OCaml':
-    [
-      'ocaml'
-    ]
-  'Perl':
-    [
-      'perl',
-      'manpages'
-    ]
-  'PHP':
-    _.union(
-      php,
-      web
-    )
-  'Processing':
-    [
-      'processing'
-    ]
-  'Puppet':
-    [
-      'puppet'
-    ]
-  'Python':
-    [
-      'python',
-      'django',
-      'twisted',
-      'sphinx',
-      'flask',
-      'tornado',
-      'sqlalchemy',
-      'numpy',
-      'scipy',
-      'salt',
-      'cvp'
-    ]
-  'R':
-    [
-      'r'
-    ]
-  'Ruby':
-    ruby
-  'Ruby on Rails':
-    ruby
-  'Rust':
-    [
-      'rust'
-    ]
-  'Sass':
-    _.union(
-      [
-        'sass',
-        'compass',
-        'bourbon',
-        'neat'
-      ],
-      css
-    )
-  'Scala':
-    [
-      'scala',
-      'akka',
-      'playscala'
-    ]
-  'Shell Scripts':
-    [
-      'bash',
-      'manpages'
-    ]
-  'SQL':
-    [
-      'mysql',
-      'sqlite',
-      'psql'
-    ]
-  'SQL (Rails)':
-    ruby
-  'Stylus':
-    css
-  'Tcl':
-    [
-      'tcl'
-    ]
-  'YAML':
-    [
-      'chef',
-      'ansible'
-    ]
+  'ActionScript': [
+    'actionscript'
+  ]
+  'Boo': [
+    'unity3d'
+  ]
+  'C': [
+    'c',
+    'glib',
+    'gl2',
+    'gl3',
+    'gl4',
+    'manpages'
+  ]
+  'C++': [
+    'cpp',
+    'net',
+    'boost',
+    'qt',
+    'cvcpp',
+    'cocos2dx',
+    'c',
+    'manpages'
+  ]
+  'C#': [
+    'net',
+    'mono',
+    'unity3d'
+  ]
+  'Objective-J': [
+    'cappuccino'
+  ]
+  'Clojure': [
+    'clojure'
+  ]
+  'CoffeeScript': coffeescript
+  'CoffeeScript (Literate)': coffeescript
+  'ColdFusion': [
+    'cf'
+  ]
+  'CSS': css
+  'Dart': [
+    'dartlang',
+    'polymerdart',
+    'angulardart'
+  ]
+  'Elixir': [
+    'elixir'
+  ]
+  'Erlang': [
+    'erlang'
+  ]
+  'Go': [
+    'go',
+    'godoc'
+  ]
+  'Haskell': [
+    'haskell'
+  ]
+  'Ruby Haml': [
+    'haml'
+  ]
+  'Handlebars': web
+  'HTML': web
+  'HTML (Rails)': [
+    'ruby',
+    'rubygems',
+    'rails'
+  ].concat(web)
+  'Jade': [
+    'jade'
+  ].concat(web)
+  'Java': [
+    'java',
+    'javafx',
+    'grails',
+    'groovy',
+    'playjava',
+    'spring',
+    'cvj',
+    'processing'
+  ]
+  'JavaScript': js
+  'LESS': css
+  'Lisp': [
+    'lisp'
+  ]
+  'Literate Haskell': [
+    'haskell'
+  ]
+  'Lua': [
+    'lua',
+    'corona'
+  ]
+  'GitHub Markdown': [
+    'markdown'
+  ]
+  'Objective-C': objectiveC
+  'Objective-C++': [
+    'cpp',
+    'cocos2dx'
+  ].concat(objectiveC)
+  'OCaml': [
+    'ocaml'
+  ]
+  'Perl': [
+    'perl',
+    'manpages'
+  ]
+  'PHP': php.concat(web)
+  'Processing': [
+    'processing'
+  ]
+  'Puppet': [
+    'puppet'
+  ]
+  'Python': [
+    'python',
+    'django',
+    'twisted',
+    'sphinx',
+    'flask',
+    'tornado',
+    'sqlalchemy',
+    'numpy',
+    'scipy',
+    'salt',
+    'cvp'
+  ]
+  'R': [
+    'r'
+  ]
+  'Ruby': ruby
+  'Ruby on Rails': ruby
+  'Rust': [
+    'rust'
+  ]
+  'Sass': [
+    'sass',
+    'compass',
+    'bourbon',
+    'neat'
+  ].concat(css)
+  'Scala': [
+    'scala',
+    'akka',
+    'playscala'
+  ]
+  'Shell Scripts': [
+    'bash',
+    'manpages'
+  ]
+  'SQL': [
+    'mysql',
+    'sqlite',
+    'psql'
+  ]
+  'SQL (Rails)': ruby
+  'Stylus': css
+  'Tcl': [
+    'tcl'
+  ]
+  'YAML': [
+    'chef',
+    'ansible'
+  ]

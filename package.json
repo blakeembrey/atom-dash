@@ -13,9 +13,6 @@
     "lint": "coffeelint .",
     "test": "npm run lint && apm test"
   },
-  "dependencies": {
-    "underscore-plus": "^1.2.1"
-  },
   "devDependencies": {
     "coffeelint": "^1.9.2",
     "pre-commit": "^1.0.5"
