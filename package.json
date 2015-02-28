@@ -10,12 +10,14 @@
     "atom": ">0.50.0"
   },
   "scripts": {
-    "test": "apm test"
+    "lint": "coffeelint .",
+    "test": "npm run lint && apm test"
   },
   "dependencies": {
     "underscore-plus": "^1.2.1"
   },
   "devDependencies": {
-    "pre-commit": "0.0.9"
+    "coffeelint": "^1.9.2",
+    "pre-commit": "^1.0.5"
   }
 }

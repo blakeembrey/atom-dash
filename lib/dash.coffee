@@ -1,6 +1,4 @@
-_     = require('underscore-plus')
-qs    = require('querystring')
-map   = require('./map')
+map = require('./map')
 shell = require('shell')
 
 plugin = module.exports =
@@ -20,7 +18,7 @@ plugin = module.exports =
 
     return plugin.search(selection, sensitive) if selection
 
-    scopes       = editor.getCursorScopes()
+    scopes = editor.getCursorScopes()
     currentScope = scopes[scopes.length - 1]
 
     # Use the current cursor scope if available. If the current scope is a
@@ -28,7 +26,7 @@ plugin = module.exports =
     # Ignore: comment (any), string (any), meta (html), markup (md).
     if scopes.length > 1 && !/^(?:comment|string|meta|markup)(?:\.|$)/.test(currentScope)
       range = editor.bufferRangeForScopeAtCursor(currentScope)
-      text  = editor.getTextInBufferRange(range)
+      text = editor.getTextInBufferRange(range)
     else
       text = editor.getWordUnderCursor()
 
