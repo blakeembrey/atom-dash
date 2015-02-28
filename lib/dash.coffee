@@ -12,7 +12,10 @@ plugin = module.exports =
     })
 
   shortcut: (sensitive) ->
-    editor    = atom.workspace.getActiveEditor()
+    editor = atom.workspace.getActiveEditor()
+
+    return if !editor
+
     selection = editor.getSelection().getText()
 
     return plugin.search(selection, sensitive) if selection
