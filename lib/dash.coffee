@@ -1,5 +1,5 @@
 map = require('./map')
-shell = require('shell')
+spawn = require('child_process').spawn
 
 plugin = module.exports =
   activate: () ->
@@ -39,7 +39,7 @@ plugin = module.exports =
     if sensitive
       language = atom.workspace.getActiveEditor().getGrammar().name
 
-    shell.openExternal(@createLink(string, language))
+    spawn('open', ['-g', @createLink(string, language)])
 
   createLink: (string, language) ->
     # Attempt to pull default configuration from the user config. If this
@@ -53,4 +53,4 @@ plugin = module.exports =
     if keys?.length
       link += 'keys=' + keys.map(encodeURIComponent).join(',') + '&'
 
-    link + 'query=' + encodeURIComponent(string)
+    link += 'query=' + encodeURIComponent(string)
