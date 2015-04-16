@@ -14,11 +14,11 @@ plugin = module.exports =
 
     return if !editor
 
-    selection = editor.getSelection().getText()
+    selection = editor.getLastSelection().getText()
 
     return plugin.search(selection, sensitive) if selection
 
-    scopes = editor.getCursorScopes()
+    scopes = editor.getLastCursor().getScopeDescriptor().getScopesArray()
     currentScope = scopes[scopes.length - 1]
 
     # Use the current cursor scope if available. If the current scope is a
