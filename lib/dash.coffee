@@ -10,7 +10,7 @@ plugin = module.exports =
     })
 
   shortcut: (sensitive) ->
-    editor = atom.workspace.getActiveEditor()
+    editor = atom.workspace.getActiveTextEditor()
 
     return if !editor
 
@@ -33,11 +33,11 @@ plugin = module.exports =
     plugin.search(text, sensitive)
 
   contextMenu: () ->
-    plugin.search(atom.workspace.getActiveEditor().getWordUnderCursor(), true)
+    plugin.search(atom.workspace.getActiveTextEditor().getWordUnderCursor(), true)
 
   search: (string, sensitive) ->
     if sensitive
-      language = atom.workspace.getActiveEditor().getGrammar().name
+      language = atom.workspace.getActiveTextEditor().getGrammar().name
 
     spawn('open', ['-g', @createLink(string, language)])
 
