@@ -6,7 +6,7 @@ Simple [Dash](http://kapeli.com/dash) documentation integration for [Atom](https
 
 ## Installation
 
-```sh
+```
 apm install dash
 ```
 
@@ -18,7 +18,7 @@ Look up the word under the current cursor or any selected text by pressing `ctrl
 
 ### Adding additional docsets
 
-Open the Atom config file `Atom -> Open Your Config` and add the docsets under `dash.grammars` object in the form of `language: [docset, docset]`. For example:
+Open the Atom config file `Atom -> Open Your Config` and add the docsets under the `dash` object in the following form:
 
 ```cson
 'dash':
@@ -26,9 +26,15 @@ Open the Atom config file `Atom -> Open Your Config` and add the docsets under `
     'JavaScript': [
       'nodejs'
     ]
+  'filenames':
+    'gruntfile.js': [
+      'grunt'
+    ]
 ```
 
-Docsets defined in your local configuration will override the default settings. Take a look at the [built-in map file](https://github.com/blakeembrey/atom-dash/blob/master/lib/map.coffee) for the default docset configuration.
+**Please note:** File names _must_ be lower case.
+
+Docsets defined in your local configuration will override the default settings. Take a look at the [built-in grammar map](https://github.com/blakeembrey/atom-dash/blob/master/lib/grammar-map.coffee) and [built-in filename map](https://github.com/blakeembrey/atom-dash/blob/master/lib/filename-map.coffee) for the default configurations.
 
 ## License
 

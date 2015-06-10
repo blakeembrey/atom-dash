@@ -1,4 +1,4 @@
-map = require '../lib/map'
+map = require '../lib/grammar-map'
 
 describe 'map', ->
   it 'should have a context for HTML', ->
