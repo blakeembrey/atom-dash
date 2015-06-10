@@ -1,7 +1,19 @@
-map = require('./map')
+basename = require('path').basename
 spawn = require('child_process').spawn
+grammarMap = require('./grammar-map')
+filenameMap = require('./filename-map')
 
 plugin = module.exports =
+  # Use an empty config by default since Atom fails to populate the settings
+  # view corretly with pre-defined properties.
+  config:
+    grammars:
+      type: 'object'
+      properties: {}
+    filenames:
+      type: 'object'
+      properties: {}
+
   activate: () ->
     atom.commands.add('atom-text-editor', {
       'dash:shortcut': @shortcut,
@@ -36,21 +48,29 @@ plugin = module.exports =
     plugin.search(atom.workspace.getActiveTextEditor().getWordUnderCursor(), true)
 
   search: (string, sensitive) ->
-    if sensitive
-      language = atom.workspace.getActiveTextEditor().getGrammar().name
+    activeEditor = atom.workspace.getActiveTextEditor()
 
-    spawn('open', ['-g', @createLink(string, language)])
+    if sensitive and activeEditor
+      path = activeEditor.getPath()
+      language = activeEditor.getGrammar().name
 
-  createLink: (string, language) ->
-    # Attempt to pull default configuration from the user config. If this
-    # does not exist, fall back to the default language map.
+    spawn('open', ['-g', @createLink(string, path, language)])
+
+  createLink: (string, path, language) ->
+    keys = []
+
+    if path
+      filename = basename(path).toLowerCase()
+      filenameConfig = atom.config.get('dash.filenames') || {}
+      keys = keys.concat(filenameConfig[filename] || filenameMap[filename] || [])
+
     if language
-      keys = atom.config.get('dash.grammars.' + language)
-      keys = map[language] if !keys
+      grammarConfig = atom.config.get('dash.grammars') || {}
+      keys = keys.concat(grammarConfig[language] || grammarMap[language] || [])
 
     link = 'dash-plugin://'
 
-    if keys?.length
+    if keys.length
       link += 'keys=' + keys.map(encodeURIComponent).join(',') + '&'
 
     link += 'query=' + encodeURIComponent(string)
