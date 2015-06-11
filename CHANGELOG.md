@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased](https://github.com/blakeembrey/atom-dash/compare/v1.2.0...HEAD)
+
+### Added
+
+- Create and backtrack CHANGELOG.
+
 ## [1.2.0](https://github.com/blakeembrey/atom-dash/compare/v1.1.1...v1.2.0) - 2015-06-10
 
 ### Added
@@ -25,7 +31,7 @@ All notable changes to this project will be documented in this file. This projec
 
 - Use `spawn` with `-g` instead of `shell.openExternal` to call Dash without opening it (see #14).
 
-### Removed.
+### Removed
 
 - No more Gittip badge on README.
 
