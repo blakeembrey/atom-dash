@@ -2,11 +2,20 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased](https://github.com/blakeembrey/atom-dash/compare/v1.2.0...HEAD)
+## [1.2.1](https://github.com/blakeembrey/atom-dash/compare/v1.2.0...v1.2.1)
 
 ### Added
 
 - Create and backtrack CHANGELOG.
+
+### Fixed
+
+- Fallback to the current word under cursor when range returns undefined.
+
+### Changed
+
+- Commands no longer imply usage of event object as a truthy value.
+- Context menu shortcut follows the same logic as shortcuts now.
 
 ## [1.2.0](https://github.com/blakeembrey/atom-dash/compare/v1.1.1...v1.2.0) - 2015-06-10
 
