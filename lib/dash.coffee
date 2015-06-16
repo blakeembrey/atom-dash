@@ -41,6 +41,8 @@ plugin = module.exports =
       text = editor.getTextInBufferRange(range)
     else
       text = editor.getWordUnderCursor()
+      # Make search inside comments non-sensitive.
+      sensitive = false
 
     plugin.search(text, sensitive)
 
