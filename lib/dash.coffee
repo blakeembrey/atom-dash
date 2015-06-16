@@ -18,7 +18,7 @@ plugin = module.exports =
     atom.commands.add('atom-text-editor', {
       'dash:shortcut': () => @shortcut(true),
       'dash:shortcut-alt': () => @shortcut(false),
-      'dash:context-menu': () => @contextMenu()
+      'dash:context-menu': () => @shortcut(true)
     })
 
   shortcut: (sensitive) ->
@@ -45,9 +45,6 @@ plugin = module.exports =
       sensitive = false
 
     plugin.search(text, sensitive)
-
-  contextMenu: () ->
-    plugin.search(atom.workspace.getActiveTextEditor().getWordUnderCursor(), true)
 
   search: (string, sensitive) ->
     activeEditor = atom.workspace.getActiveTextEditor()
