@@ -33,16 +33,18 @@ plugin = module.exports =
     scopes = editor.getLastCursor().getScopeDescriptor().getScopesArray()
     currentScope = scopes[scopes.length - 1]
 
-    # Use the current cursor scope if available. If the current scope is a
-    # string, comment or not available, get the current word under the cursor.
-    # Ignore: comment (any), string (any), meta (html), markup (md).
-    if scopes.length > 1 && !/^(?:comment|string|meta|markup)(?:\.|$)/.test(currentScope)
-      range = editor.bufferRangeForScopeAtCursor(currentScope)
+    # Search using the current cursor word when the scope is a string,
+    # comment, meta (HTML) or markup (MD), or when there is no active scope.
+    if scopes.length < 2 or /^(?:comment|string|meta|markup)(?:\.|$)/.test(currentScope)
+      return plugin.search(editor.getWordUnderCursor(), sensitive)
+
+    range = editor.bufferRangeForScopeAtCursor(currentScope)
+
+    # Sometimes the range is unavailable. Fallback to the current word.
+    if range?
       text = editor.getTextInBufferRange(range)
     else
       text = editor.getWordUnderCursor()
-      # Make search inside comments non-sensitive.
-      sensitive = false
 
     plugin.search(text, sensitive)
 
