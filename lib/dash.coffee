@@ -16,9 +16,9 @@ plugin = module.exports =
 
   activate: () ->
     atom.commands.add('atom-text-editor', {
-      'dash:shortcut': @shortcut,
-      'dash:shortcut-alt': @shortcut.bind(@, false),
-      'dash:context-menu': @contextMenu
+      'dash:shortcut': () => @shortcut(true),
+      'dash:shortcut-alt': () => @shortcut(false),
+      'dash:context-menu': () => @contextMenu()
     })
 
   shortcut: (sensitive) ->
