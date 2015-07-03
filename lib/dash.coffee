@@ -64,9 +64,9 @@ plugin = module.exports =
       # on an ampersand that is not contained in double-quotes.
       quotedLink = '"' + @createLink(string, path, language) + '"'
       exec('cmd.exe /c start "" ' + quotedLink, null)
-    else if platform == "linux"
-      spawn('xdg-open', [@createLink(string, path, language)])
-    else  # Darwin (OSX) / FreeBSD 
+    #else if platform == "linux"  ## Zeal is the only linux alternative and it does not support Dash urls at this point
+    #  spawn('xdg-open', [@createLink(string, path, language)])
+    else  # Darwin (OSX) / FreeBSD
       spawn('open', ['-g', @createLink(string, path, language)])
 
   createLink: (string, path, language) ->
