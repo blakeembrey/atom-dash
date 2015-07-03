@@ -1,5 +1,7 @@
 basename = require('path').basename
 spawn = require('child_process').spawn
+exec = require('child_process').exec
+platform = require('process').platform
 grammarMap = require('./grammar-map')
 filenameMap = require('./filename-map')
 
@@ -55,7 +57,17 @@ plugin = module.exports =
       path = activeEditor.getPath()
       language = activeEditor.getGrammar().name
 
-    spawn('open', ['-g', @createLink(string, path, language)])
+    if platform == "win32"
+      # Exec is used because spawn escapes arguments that contain double-quotes
+      # and replaces them with backslashes. This interferes with the ability to
+      # properly create the child process in windows, since windows will barf
+      # on an ampersand that is not contained in double-quotes.
+      quotedLink = '"' + @createLink(string, path, language) + '"'
+      exec('cmd.exe /c start "" ' + quotedLink, null)
+    else if platform == "linux"
+      spawn('xdg-open', [@createLink(string, path, language)])
+    else  # Darwin (OSX) / FreeBSD 
+      spawn('open', ['-g', @createLink(string, path, language)])
 
   createLink: (string, path, language) ->
     keys = []
