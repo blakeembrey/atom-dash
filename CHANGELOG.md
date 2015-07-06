@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.3.0](https://github.com/blakeembrey/atom-dash/compare/v1.2.1...v1.3.0)
+
+### Added
+
+- Add support for Velocity (using Dash URIs) under Windows
+- Add support for Zeal under Linux
+
 ## [1.2.1](https://github.com/blakeembrey/atom-dash/compare/v1.2.0...v1.2.1)
 
 ### Added
