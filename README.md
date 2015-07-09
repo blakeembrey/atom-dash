@@ -16,7 +16,7 @@ Alternatively open `Preferences -> Packages` and search for `dash`.
 
 Look up the word under the current cursor or any selected text by pressing `ctrl-h`. By default, this will cause a syntax sensitive search (E.g. it'll search based on the current file type). If you want to search all documentation, press `ctrl-alt-h`.
 
-**Please note:** This plugin will work also with Velocity on Windows and Zeal on Mac.
+**Please note:** This plugin will work also with Velocity on Windows and Zeal on Linux.
 
 ### Adding additional docsets
 
