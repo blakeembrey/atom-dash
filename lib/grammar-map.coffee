@@ -7,6 +7,13 @@ css = [
   'phonegap'
 ]
 
+sass = [
+  'sass',
+  'compass',
+  'bourbon',
+  'neat'
+].concat(css)
+
 js = [
   'javascript',
   'jquery',
@@ -229,12 +236,8 @@ module.exports =
   'Rust': [
     'rust'
   ]
-  'Sass': [
-    'sass',
-    'compass',
-    'bourbon',
-    'neat'
-  ].concat(css)
+  'Sass': sass
+  'SCSS': sass
   'Scala': [
     'scala',
     'akka',
