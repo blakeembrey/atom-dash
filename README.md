@@ -10,7 +10,7 @@
 apm install dash
 ```
 
-Alternatively open `Preferences -> Packages` and search for `dash`.
+Alternatively, open `Settings/Preferences -> Install` and search for `dash`.
 
 ## Usage
 
