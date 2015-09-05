@@ -6,6 +6,13 @@
   "description": "Dash documentation integration with Atom",
   "repository": "https://github.com/blakeembrey/atom-dash",
   "license": "MIT",
+  "keywords": [
+    "dash",
+    "documentation",
+    "api",
+    "docs",
+    "man"
+  ],
   "activationCommands": {
     "atom-text-editor": [
       "dash:shortcut",
