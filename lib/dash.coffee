@@ -31,7 +31,8 @@ plugin = module.exports =
 
     return plugin.search(selection, sensitive) if selection
 
-    scopes = editor.getLastCursor().getScopeDescriptor().getScopesArray()
+    cursor = editor.getLastCursor()
+    scopes = cursor.getScopeDescriptor().getScopesArray()
     currentScope = scopes[scopes.length - 1]
 
     # Search using the current cursor word when the scope is a string,
@@ -39,7 +40,13 @@ plugin = module.exports =
     if scopes.length < 2 or /^(?:comment|string|meta|markup)(?:\.|$)/.test(currentScope)
       return plugin.search(editor.getWordUnderCursor(), sensitive)
 
-    range = editor.bufferRangeForScopeAtCursor(currentScope)
+    # Hack around #26 until Atom is fixed.
+    range = editor.displayBuffer.bufferRangeForScreenRange(
+      editor.displayBuffer.bufferRangeForScopeAtPosition(
+        currentScope,
+        cursor.getScreenPosition()
+      )
+    )
 
     # Sometimes the range is unavailable. Fallback to the current word.
     if range?
