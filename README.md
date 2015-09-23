@@ -14,11 +14,11 @@ Alternatively, open `Settings/Preferences -> Install` and search for `dash`.
 
 ## Usage
 
-Look up the word under the current cursor or any selected text by pressing `ctrl-h`. By default, this will cause a syntax sensitive search (E.g. it'll search based on the current file type). If you want to search all documentation, press `ctrl-alt-h`.
+Look up the token under your cursor or some selected text by pressing `ctrl-h`. By default, this uses a scoped search and searches based on the current file name and syntax. If you want to search all documentation, press `ctrl-alt-h`.
 
-**Please note:** This plugin will work also with Velocity on Windows and Zeal on Linux.
+**Please note:** This plugin also works with Velocity on Windows and Zeal on Linux.
 
-### Adding additional docsets
+### Adding Docsets
 
 Open the Atom config file `Atom -> Open Your Config` and add the docsets under the `dash` object in the following form:
 
