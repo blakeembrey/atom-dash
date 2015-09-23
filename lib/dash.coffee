@@ -15,6 +15,9 @@ plugin = module.exports =
       type: 'object'
       properties: {}
 
+  # Override `exec` for testing.
+  exec: exec
+
   activate: () ->
     atom.commands.add('atom-text-editor', {
       'dash:shortcut': () => @shortcut(true),
@@ -41,15 +44,14 @@ plugin = module.exports =
       return plugin.search(editor.getWordUnderCursor(), sensitive)
 
     # Hack around #26 until Atom is fixed.
-    range = editor.displayBuffer.bufferRangeForScreenRange(
-      editor.displayBuffer.bufferRangeForScopeAtPosition(
-        currentScope,
-        cursor.getScreenPosition()
-      )
+    displayBufferRange = editor.displayBuffer.bufferRangeForScopeAtPosition(
+      currentScope,
+      cursor.getScreenPosition()
     )
 
     # Sometimes the range is unavailable. Fallback to the current word.
-    if range?
+    if displayBufferRange
+      range = editor.displayBuffer.bufferRangeForScreenRange(displayBufferRange)
       text = editor.getTextInBufferRange(range)
     else
       text = editor.getWordUnderCursor()
@@ -69,7 +71,7 @@ plugin = module.exports =
     # and replaces them with backslashes. This interferes with the ability to
     # properly create the child process in windows, since windows will barf
     # on an ampersand that is not contained in double-quotes.
-    return exec(cmd, cb)
+    plugin.exec(cmd, cb)
 
   getCommand: (string, path, language) ->
     if platform == 'win32'
