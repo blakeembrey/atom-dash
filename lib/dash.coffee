@@ -45,15 +45,10 @@ plugin = module.exports =
     if scopes.length < 2 or /^(?:comment|string|meta|markup)(?:\.|$)/.test(currentScope)
       return plugin.search(editor.getWordUnderCursor(), sensitive, background)
 
-    # Hack around #26 until Atom is fixed.
-    displayBufferRange = editor.displayBuffer.bufferRangeForScopeAtPosition(
-      currentScope,
-      cursor.getScreenPosition()
-    )
+    range = editor.bufferRangeForScopeAtCursor(currentScope)
 
     # Sometimes the range is unavailable. Fallback to the current word.
-    if displayBufferRange
-      range = editor.displayBuffer.bufferRangeForScreenRange(displayBufferRange)
+    if range
       text = editor.getTextInBufferRange(range)
     else
       text = editor.getWordUnderCursor()
