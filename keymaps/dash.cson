@@ -9,4 +9,6 @@
 # https://atom.io/docs/latest/advanced/keymaps
 'atom-text-editor':
   'ctrl-h': 'dash:shortcut'
+  'ctrl-shift-h': 'dash:shortcut-background'
   'ctrl-alt-h': 'dash:shortcut-alt'
+  'ctrl-alt-shift-h': 'dash:shortcut-alt'

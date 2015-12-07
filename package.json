@@ -16,7 +16,9 @@
   "activationCommands": {
     "atom-text-editor": [
       "dash:shortcut",
+      "dash:shortcut-background",
       "dash:shortcut-alt",
+      "dash:shortcut-alt-background",
       "dash:context-menu"
     ]
   },
