@@ -4,6 +4,8 @@
 
 > Simple [Dash](http://kapeli.com/dash) documentation integration for [Atom](https://atom.io/packages/dash).
 
+**Please note:** This plugin will also work with Velocity on Windows and Zeal on Linux.
+
 ## Installation
 
 ```
@@ -14,9 +16,9 @@ Alternatively, open `Settings/Preferences -> Install` and search for `dash`.
 
 ## Usage
 
-Look up the token under your cursor or some selected text by pressing `ctrl-h`. By default, this uses a scoped search and searches based on the current file name and syntax. If you want to search all documentation, press `ctrl-alt-h`.
+Look up the word under your cursor or selected text by pressing `ctrl-h`. This uses a scoped search and searches based on the current file name and selected syntax. If you want to search all documentation, press `ctrl-alt-h`.
 
-**Please note:** This plugin also works with Velocity on Windows and Zeal on Linux.
+**Hint:** To open avoid activating Dash, add `shift` to the command. E.g. `ctrl-shift-h`. This is useful when Dash is already visible - such as a dual monitor setup.
 
 ### Adding Docsets
 
