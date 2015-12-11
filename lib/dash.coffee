@@ -34,26 +34,10 @@ plugin = module.exports =
 
     selection = editor.getLastSelection().getText()
 
-    return plugin.search(selection, sensitive, background) if selection
+    if selection
+      return plugin.search(selection, sensitive, background)
 
-    cursor = editor.getLastCursor()
-    scopes = cursor.getScopeDescriptor().getScopesArray()
-    currentScope = scopes[scopes.length - 1]
-
-    # Search using the current cursor word when the scope is a string,
-    # comment, meta (HTML) or markup (MD), or when there is no active scope.
-    if scopes.length < 2 or /^(?:comment|string|meta|markup)(?:\.|$)/.test(currentScope)
-      return plugin.search(editor.getWordUnderCursor(), sensitive, background)
-
-    range = editor.bufferRangeForScopeAtCursor(currentScope)
-
-    # Sometimes the range is unavailable. Fallback to the current word.
-    if range
-      text = editor.getTextInBufferRange(range)
-    else
-      text = editor.getWordUnderCursor()
-
-    plugin.search(text, sensitive, background)
+    return plugin.search(editor.getWordUnderCursor(), sensitive, background)
 
   search: (string, sensitive, background, cb) ->
     activeEditor = atom.workspace.getActiveTextEditor()
