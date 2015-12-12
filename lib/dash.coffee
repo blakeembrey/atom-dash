@@ -55,13 +55,15 @@ plugin = module.exports =
     plugin.exec(cmd, cb)
 
   getCommand: (string, path, language, background) ->
+    uri = @getDashURI(string, path, language, background)
+
     if platform == 'win32'
-      return 'cmd.exe /c start "" "' + @getDashURI(string, path, language, background) + '"'
+      return 'cmd.exe /c start "" "' + uri + '"'
 
     if platform == 'linux'
-      return @getZealCommand(string, path, language, background)
+      return 'xdg-open "' + uri + '"'
 
-    return 'open -g "' + @getDashURI(string, path, language, background) + '"'
+    return 'open -g "' + uri + '"'
 
   getKeywordString: (path, language) ->
     keys = []
@@ -88,14 +90,3 @@ plugin = module.exports =
       link += '&prevent_activation=true'
 
     return link
-
-  # TODO(blakeembrey): If someone knows how to background Zeal on activation,
-  # please open a Pull Request!
-  getZealCommand: (string, path, language, background) ->
-    query = string
-    keywords = @getKeywordString(path, language)
-
-    if keywords
-      query = keywords + ':' + query
-
-    return 'zeal --query "' + query + '"'
