@@ -34,10 +34,16 @@ plugin = module.exports =
 
     selection = editor.getLastSelection().getText()
 
-    if selection
-      return plugin.search(selection, sensitive, background)
+    callback = (error) =>
+      atom.notifications.addError('Unable to launch Dash', {
+        dismissable: true,
+        detail: error.message
+      }) if error
 
-    return plugin.search(editor.getWordUnderCursor(), sensitive, background)
+    if selection
+      return plugin.search(selection, sensitive, background, callback)
+
+    return plugin.search(editor.getWordUnderCursor(), sensitive, background, callback)
 
   search: (string, sensitive, background, cb) ->
     activeEditor = atom.workspace.getActiveTextEditor()
