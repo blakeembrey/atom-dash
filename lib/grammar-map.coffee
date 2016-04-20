@@ -182,6 +182,9 @@ module.exports =
     'processing'
   ]
   'JavaScript': js
+  'LaTeX': [
+    'latex'
+  ]
   'LESS': css
   'Lisp': [
     'lisp'
