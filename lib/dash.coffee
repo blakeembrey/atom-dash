@@ -86,7 +86,10 @@ plugin = module.exports =
     return keys.map(encodeURIComponent).join(',') if keys.length
 
   getDashURI: (string, path, language, background) ->
-    link = 'dash-plugin://query=' + encodeURIComponent(string)
+    if process.env.XDG_SESSION_DESKTOP == "KDE"
+      link = 'dash-plugin:query=' + encodeURIComponent(string) #plays nice with KDE Plasma 5
+    else link = 'dash-plugin//:query=' + encodeURIComponent(string)
+    
     keywords = @getKeywordString(path, language)
 
     if keywords
