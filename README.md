@@ -22,7 +22,7 @@ Look up the word under your cursor or selected text by pressing `ctrl-h`. This u
 
 ### Adding Docsets
 
-Open the Atom config file `Atom -> Open Your Config` and add the docsets under the `dash` object in the following form:
+Open the Atom config file `Atom -> Config...` and add the docsets under the `dash` object in the following form:
 
 ```cson
 'dash':

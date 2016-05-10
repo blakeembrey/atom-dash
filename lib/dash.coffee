@@ -6,7 +6,7 @@ filenameMap = require('./filename-map')
 
 plugin = module.exports =
   # Use an empty config by default since Atom fails to populate the settings
-  # view corretly with pre-defined properties.
+  # view correctly with pre-defined properties.
   config:
     grammars:
       type: 'object'
@@ -56,7 +56,7 @@ plugin = module.exports =
 
     # Exec is used because spawn escapes arguments that contain double-quotes
     # and replaces them with backslashes. This interferes with the ability to
-    # properly create the child process in windows, since windows will barf
+    # properly create the child process in Windows, since Windows will barf
     # on an ampersand that is not contained in double-quotes.
     plugin.exec(cmd, cb)
 

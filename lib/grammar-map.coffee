@@ -19,6 +19,8 @@ js = [
   'jquery',
   'jqueryui',
   'jquerym',
+  'react',
+  'nodejs',
   'angularjs',
   'backbone',
   'marionette',
