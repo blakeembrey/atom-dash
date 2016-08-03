@@ -85,9 +85,16 @@ plugin = module.exports =
 
     return keys.map(encodeURIComponent).join(',') if keys.length
 
+  getDashScheme: () ->
+    if platform == 'linux'
+      return 'dash-plugin:'
+
+    return 'dash-plugin://'
+
   getDashURI: (string, path, language, background) ->
-    link = 'dash-plugin://query=' + encodeURIComponent(string)
+    scheme = @getDashScheme()
     keywords = @getKeywordString(path, language)
+    link = scheme + 'query=' + encodeURIComponent(string)
 
     if keywords
       link += '&keys=' + keywords
