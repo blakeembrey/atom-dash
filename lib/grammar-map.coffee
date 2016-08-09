@@ -100,6 +100,20 @@ objectiveC = [
   'manpages'
 ]
 
+python = [
+  'python',
+  'django',
+  'twisted',
+  'sphinx',
+  'flask',
+  'tornado',
+  'sqlalchemy',
+  'numpy',
+  'scipy',
+  'salt',
+  'cvp'
+]
+
 module.exports =
   'ActionScript': [
     'actionscript'
@@ -201,6 +215,7 @@ module.exports =
   'GitHub Markdown': [
     'markdown'
   ]
+  'MagicPython': python
   'Objective-C': objectiveC
   'Objective-C++': [
     'cpp',
@@ -220,19 +235,7 @@ module.exports =
   'Puppet': [
     'puppet'
   ]
-  'Python': [
-    'python',
-    'django',
-    'twisted',
-    'sphinx',
-    'flask',
-    'tornado',
-    'sqlalchemy',
-    'numpy',
-    'scipy',
-    'salt',
-    'cvp'
-  ]
+  'Python': python
   'R': [
     'r'
   ]
