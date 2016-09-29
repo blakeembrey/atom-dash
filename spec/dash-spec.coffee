@@ -9,8 +9,8 @@ describe "dash", ->
         editor.setCursorBufferPosition({ row: 1, column: 6 })
 
         new Promise (resolve, reject) ->
-          dash.exec = (cmd) ->
-            expect(cmd).toEqual('open -g "dash-plugin://query=.SetFlags"')
+          dash.openExternal = (uri) ->
+            expect(uri).toEqual('dash-plugin://query=.SetFlags')
             resolve()
 
           dash.shortcut(true)
@@ -23,8 +23,8 @@ describe "dash", ->
         editor.setCursorBufferPosition({ row: 1, column: 6 })
 
         new Promise (resolve, reject) ->
-          dash.exec = (cmd) ->
-            expect(cmd).toEqual('open -g "dash-plugin://query=.SetFlags&prevent_activation=true"')
+          dash.openExternal = (uri) ->
+            expect(uri).toEqual('dash-plugin://query=.SetFlags&prevent_activation=true')
             resolve()
 
           dash.shortcut(true, true)

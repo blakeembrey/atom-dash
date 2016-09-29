@@ -1,5 +1,5 @@
 basename = require('path').basename
-exec = require('child_process').exec
+openExternal = require('shell').openExternal
 platform = require('process').platform
 grammarMap = require('./grammar-map')
 filenameMap = require('./filename-map')
@@ -15,8 +15,8 @@ plugin = module.exports =
       type: 'object'
       properties: {}
 
-  # Override `exec` for testing.
-  exec: exec
+  # Override `openExternal` for testing.
+  openExternal: openExternal
 
   activate: () ->
     atom.commands.add('atom-text-editor', {
@@ -52,24 +52,7 @@ plugin = module.exports =
       path = activeEditor.getPath()
       language = activeEditor.getGrammar().name
 
-    cmd = @getCommand(string, path, language, background)
-
-    # Exec is used because spawn escapes arguments that contain double-quotes
-    # and replaces them with backslashes. This interferes with the ability to
-    # properly create the child process in Windows, since Windows will barf
-    # on an ampersand that is not contained in double-quotes.
-    plugin.exec(cmd, cb)
-
-  getCommand: (string, path, language, background) ->
-    uri = @getDashURI(string, path, language, background)
-
-    if platform == 'win32'
-      return 'cmd.exe /c start "" "' + uri + '"'
-
-    if platform == 'linux'
-      return 'xdg-open "' + uri + '"'
-
-    return 'open -g "' + uri + '"'
+    @openExternal(@getDashURI(string, path, language, background), activate: false)
 
   getKeywordString: (path, language) ->
     keys = []
