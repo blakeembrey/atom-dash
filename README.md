@@ -4,7 +4,7 @@
 
 > Simple [Dash](http://kapeli.com/dash) documentation integration for [Atom](https://atom.io/packages/dash).
 
-**Please note:** This plugin will also work with Velocity on Windows and Zeal on Linux.
+**Please note:** This plugin also works with Velocity or Zeal on Windows, and Zeal on Linux.
 
 ## Installation
 
