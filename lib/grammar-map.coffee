@@ -118,6 +118,7 @@ module.exports =
   'ActionScript': [
     'actionscript'
   ]
+  'Babel ES6 JavaScript': js
   'Boo': [
     'unity3d'
   ]
