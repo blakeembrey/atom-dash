@@ -1,5 +1,7 @@
 # Atom Dash
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/blakeembrey/atom-dash.svg)](https://greenkeeper.io/)
+
 [![Build status][travis-image]][travis-url]
 
 > Simple [Dash](http://kapeli.com/dash) documentation integration for [Atom](https://atom.io/packages/dash).
