@@ -30,7 +30,7 @@
     "test": "npm run lint && apm test"
   },
   "devDependencies": {
-    "coffeelint": "^1.9.2",
+    "coffeelint": "^2.0.0",
     "pre-commit": "^1.0.5"
   }
 }
