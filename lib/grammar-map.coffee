@@ -270,3 +270,6 @@ module.exports =
     'chef',
     'ansible'
   ]
+  'Terraform': [
+    'terraform'
+  ]
