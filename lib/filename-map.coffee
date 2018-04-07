@@ -5,3 +5,6 @@ module.exports =
   'gulpfile.js': [
     'gulp'
   ]
+  'Vagrantfile': [
+    'vagrant'
+  ]
