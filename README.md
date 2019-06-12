@@ -18,7 +18,7 @@ Alternatively, open `Settings/Preferences -> Install` and search for `dash`.
 
 Look up the word under your cursor or selected text by pressing `ctrl-h`. This uses a scoped search and searches based on the current file name and selected syntax. If you want to search all documentation, press `ctrl-alt-h`.
 
-**Hint:** To open avoid activating Dash, add `shift` to the command. E.g. `ctrl-shift-h`. This is useful when Dash is already visible - such as a dual monitor setup.
+**Hint:** To look up a word without bringing Dash to the front, add `shift` to the command. E.g. `ctrl-shift-h`. This is useful when Dash is already visible - such as on a dual monitor setup.
 
 ### Adding Docsets
 
